@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion House</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+   <style>
+    a{
+        color:wheat !important;
+        text-decoration: none;
+        font-size: 16px !important;
+        
+    }
+    .bod{
+        background-image: url('unisex.jpg') ;
+       background-position: top;
+       background-size: contain;
+       background-repeat: repeat;
+    }
+    .parent{
+        background-color:rgba(0, 0, 0, 0.6);
+       padding-bottom: 100px !important; 
+    }
+    .navi{
+      background-color: black !important;
+    }
+    ul{
+      padding: 8px;
+      margin: 4px;
+    }
+   
+   </style>
+</head>
+<body class="bg-info bod">
+
+        <div class="container-fluid parent">
+          <nav class="navbar navbar-expand-lg bg-light navi">
+            <div class="container-fluid">
+              <a class="navbar-brand text-warning" href="#">Fashion</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Contact us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Our Service</a>
+                  </li>
+                  <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li> -->
+                 
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-warning" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+            <div>
+                <h2 class="text-center mt-5 text-light pt-3">Fill Up The Form</h2>
+            </div>
+           
+            <div class="row">
+                <div class="col-md-6 offset-md-3 mt-3">
+                    <form action="index.html" method="get" id="form" target="_blank">
+                        <div class="row">
+                            <div class="col-md">
+                                <input class="form-control col-md" type="text" name="name" id="name" placeholder="Enter your username">
+                            </div>
+                        </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md">
+                                    <input class="form-control col-md" type="email" name="email" id="email" placeholder="Enter your email">
+                                </div>
+                            </div>    
+                            <br>
+                            <div class="row">
+                                <div class="col-md">
+                                    <input class="form-control col-md" type="password" name="password" id="password" placeholder="Enter your password">
+                                </div>
+                            </div>
+                            <br>
+                                <div class="row mb-4">
+                                    <div class="col-md">
+                                        <input class="form-control col-md" type="password" name="password" id="confirmPassword" placeholder="Confirm Password">
+                                    </div>
+                                </div>
+                
+                                <div class="row mb-2">
+                                    <div class="col-md-12">
+                                        <button class="alert  col-12 btn btn-outline-warning text-light border-light" type="submit" id="btn1">Login</button>
+                                    </div>
+                                </div>
+                </form>
+                   <div class="row">
+                        <div class="col-md-6">
+                            <button class="col-12 btn btn-primary" type="button"> <a href="signUp.html">Sign Up</a></button>
+                        </div>
+                       
+                        <div class="col-md-6">
+                            <button class="col-12 btn btn-danger" type="button"><a href="index.html" target="">Forgot password</a></button>
+                        </div>
+            
+                    </div>     
+                
+             </div>   
+        </div>
+    </div>
+   
+      <script src="jQuery.js"></script>  
+    <script>
+      $(document).ready(function(){
+        $('#btn1').click(function(){
+        var a = $('#email').val();
+         var b = $('#name').val();
+        var c = $('#password').val() ;
+        var cp = $('#confirmPassword').val() ;
+      
+         if(a == '' ||b == '' ||c == '' || cp == ''){
+            alert('All fields are required')
+              return false;
+         }else if(c != cp ){
+          alert('passwod does not match')
+                return false;
+         }else{
+          alert('Registration Successfully')
+                return true;
+         }   
+       })
+      })
+    </script>  
+</body>
+</html>
